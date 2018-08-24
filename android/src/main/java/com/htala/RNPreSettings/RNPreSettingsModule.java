@@ -44,7 +44,7 @@ public class RNPreSettingsModule extends ReactContextBaseJavaModule {
     this.reactContext = reactContext;
   }
 
-  private const String DATA_FILE_NAME = "HT_RNPreSettings.txt";
+  private static final String DATA_FILE_NAME = "HT_RNPreSettings.txt";
 
   private void writeToFile(String data, Context context) {
       try {

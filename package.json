@@ -1,7 +1,7 @@
 {
   "name": "react-native-presettings",
   "version": "0.0.1",
-  "description": "Load settings before javascript bundle loaded",
+  "description": "Load settings before javascript bundle loading",
   "main": "presettings.js",
   "typings": "./presettings.d.ts",
   "repository": {
