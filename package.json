@@ -1,0 +1,37 @@
+{
+  "name": "react-native-presettings",
+  "version": "0.0.1",
+  "description": "Load settings before javascript bundle loaded",
+  "main": "presettings.js",
+  "typings": "./presettings.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/htala/react-native-presettings"
+  },
+  "scripts": {
+    "shipit": "np"
+  },
+  "keywords": [
+    "react-component",
+    "react-native",
+    "ios",
+    "android",
+    "windows",
+    "settings",
+    "presettings",
+    "cocoapod"
+  ],
+  "author": "HTala <h.talaiee@gmail.com> (https://github.com/htala)",
+  "contributors": [
+    {
+      "name": "Hossein Talaiee",
+      "email": "h.talaiee@gmail.com",
+      "url": "https://github.com/htala"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "np": "^2.16.0",
+    "prettier": "^1.10.2"
+  }
+}
