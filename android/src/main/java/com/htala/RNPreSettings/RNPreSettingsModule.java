@@ -1,34 +1,15 @@
 package com.htala.RNPreSettings;
 
-import android.Manifest;
-import android.app.KeyguardManager;
-import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.pm.PackageInfo;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
-import android.content.res.Configuration;
-import android.net.wifi.WifiManager;
-import android.net.wifi.WifiInfo;
-import android.os.Build;
-import android.os.Environment;
-import android.os.StatFs;
-import android.os.BatteryManager;
-import android.provider.Settings.Secure;
-import android.webkit.WebSettings;
-import android.telephony.TelephonyManager;
-import android.text.format.Formatter;
-import android.app.ActivityManager;
-import android.util.DisplayMetrics;
+import java.io.OutputStreamWriter;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+import java.util.Map;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.Callback;
-import com.facebook.react.bridge.Promise;
 
 import java.util.HashMap;
 
@@ -52,9 +33,7 @@ public class RNPreSettingsModule extends ReactContextBaseJavaModule {
           outputStreamWriter.write(data);
           outputStreamWriter.close();
       }
-      catch (IOException e) {
-          Log.e("Exception", "File write failed: " + e.toString());
-      } 
+      catch (Exception e) { }
   }
 
   private String readFromFile(Context context) {
@@ -77,12 +56,7 @@ public class RNPreSettingsModule extends ReactContextBaseJavaModule {
             inputStream.close();
             ret = stringBuilder.toString();
         }
-    }
-    catch (FileNotFoundException e) {
-        Log.e("login activity", "File not found: " + e.toString());
-    } catch (IOException e) {
-        Log.e("login activity", "Can not read file: " + e.toString());
-    }
+    } catch (Exception e) { }
 
     return ret;
 }
