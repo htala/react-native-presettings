@@ -32,17 +32,17 @@ RCT_EXPORT_MODULE(RNPreSettings)
     return [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil]; 
 }
 
-- RCT_EXPORT_METHOD(setSettings:(NSString*)settings))
+RCT_EXPORT_METHOD(setSettings:(NSString*)settings)
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@DATA_FILE_NAME ofType:@"txt"];
-    return [settings toFile:path useAuxiliaryFile:NO encoding:NSUTF8StringEncoding]; 
+    [settings writeToFile:path atomically:NO encoding:NSUTF8StringEncoding error:nil];
 }
 
 - (NSDictionary *)constantsToExport
 {
     NSString *settings = [self loadSettings];
     return @{
-             @"settings": @(settings)
+             @"settings": settings
 	};
 }
 

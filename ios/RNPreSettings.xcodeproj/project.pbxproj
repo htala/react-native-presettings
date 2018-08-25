@@ -40,7 +40,6 @@
 		DA5891D81BA9A9FC002B4DB2 /* libRNPreSettings.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNPreSettings.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5891DB1BA9A9FC002B4DB2 /* RNPreSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNPreSettings.h; sourceTree = "<group>"; };
 		DA5891DD1BA9A9FC002B4DB2 /* RNPreSettings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNPreSettings.m; sourceTree = "<group>"; };
-		E72EC1401F7ABB5A0001BC90 /* libRNPreSettings-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libRNPreSettings-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				DA5891D81BA9A9FC002B4DB2 /* libRNPreSettings.a */,
-				E72EC1401F7ABB5A0001BC90 /* libRNPreSettings-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,23 +105,7 @@
 			productReference = DA5891D81BA9A9FC002B4DB2 /* libRNPreSettings.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		E72EC13F1F7ABB5A0001BC90 /* RNPreSettings-tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E72EC1481F7ABB5A0001BC90 /* Build configuration list for PBXNativeTarget "RNPreSettings-tvOS" */;
-			buildPhases = (
-				E72EC13C1F7ABB5A0001BC90 /* Sources */,
-				E72EC13D1F7ABB5A0001BC90 /* Frameworks */,
-				E72EC13E1F7ABB5A0001BC90 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "RNPreSettings-tvOS";
-			productName = "RNPreSettings-tvOS";
-			productReference = E72EC1401F7ABB5A0001BC90 /* libRNPreSettings-tvOS.a */;
-			productType = "com.apple.product-type.library.static";
-		};
+		
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -131,7 +113,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = Learnium;
+				ORGANIZATIONNAME = HTALA;
 				TargetAttributes = {
 					DA5891D71BA9A9FC002B4DB2 = {
 						CreatedOnToolsVersion = 7.0;
@@ -155,7 +137,6 @@
 			projectRoot = "";
 			targets = (
 				DA5891D71BA9A9FC002B4DB2 /* RNPreSettings */,
-				E72EC13F1F7ABB5A0001BC90 /* RNPreSettings-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -294,60 +275,6 @@
 			};
 			name = Release;
 		};
-		E72EC1461F7ABB5A0001BC90 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 10.0;
-			};
-			name = Debug;
-		};
-		E72EC1471F7ABB5A0001BC90 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 10.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -365,15 +292,6 @@
 			buildConfigurations = (
 				DA5891E21BA9A9FC002B4DB2 /* Debug */,
 				DA5891E31BA9A9FC002B4DB2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E72EC1481F7ABB5A0001BC90 /* Build configuration list for PBXNativeTarget "RNPreSettings-tvOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E72EC1461F7ABB5A0001BC90 /* Debug */,
-				E72EC1471F7ABB5A0001BC90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
