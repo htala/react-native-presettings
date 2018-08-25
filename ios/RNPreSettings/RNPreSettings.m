@@ -11,17 +11,9 @@
 
 #import "RNPreSettings.h"
 
-#if !(TARGET_OS_TV)
-#import <LocalAuthentication/LocalAuthentication.h>
-#endif
-
 @interface RNPreSettings()
 
 @end
-
-#if !(TARGET_OS_TV)
-@import CoreTelephony;
-#endif
 
 @implementation RNPreSettings
 
