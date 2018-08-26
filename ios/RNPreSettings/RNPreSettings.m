@@ -7,7 +7,7 @@
 //
 
 
-#define  DATA_FILE_NAME "HT_RNPreSettings"
+#define  DATA_FILE_NAME "HT_RNPreSettings.txt"
 
 #import "RNPreSettings.h"
 
@@ -28,21 +28,25 @@ RCT_EXPORT_MODULE(RNPreSettings)
 
 - (NSString*) loadSettings
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@DATA_FILE_NAME ofType:@"txt"];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:@DATA_FILE_NAME];
     return [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil]; 
 }
 
 RCT_EXPORT_METHOD(setSettings:(NSString*)settings)
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@DATA_FILE_NAME ofType:@"txt"];
-    [settings writeToFile:path atomically:NO encoding:NSUTF8StringEncoding error:nil];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:@DATA_FILE_NAME];
+    [settings writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
 }
 
 - (NSDictionary *)constantsToExport
 {
     NSString *settings = [self loadSettings];
     return @{
-             @"settings": settings
+             @"settings": settings ?: [NSNull null]
 	};
 }
 
